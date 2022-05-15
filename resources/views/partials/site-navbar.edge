@@ -1,0 +1,35 @@
+<div class="nav-boxS" id="navbar">
+  <ul class="in-nav ">
+
+      {{-- <li class="nav-element ">
+          <a href="/">Ana Sayfa</a>
+      </li> --}}
+
+      <li class="nav-element">
+          <a href="/">Kitaplar</a>
+      </li>
+      <li class="nav-element">
+          <a href="/categories">Kategoriler</a>
+      </li>
+      {{--  @if(displayLink)  --}}
+      <li class="nav-element">
+          <a href="/admin/addBook">Kitap Ekle</a>
+      </li>
+      <li class="nav-element">
+          <a href="/admin/books">Admin</a>
+      </li>
+      {{--  @endif  --}}
+  </ul>
+</div>
+<script>
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+          document.getElementById("navbar").style.top = "0";
+      } else {
+          document.getElementById("navbar").style.top = "-50px";
+      }
+      prevScrollpos = currentScrollPos;
+  };
+</script>
