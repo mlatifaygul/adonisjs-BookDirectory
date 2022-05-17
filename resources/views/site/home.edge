@@ -1,8 +1,31 @@
 @layout('layouts/main')
 @section('body')
-<h1 class="text-center">{{ title }}</h1>
-<div class="col-12">
-    <p class="text-center">{{ body }}</p>
+<div class="home">
+    <main class="container-books">
+        <ul class="cardList">
+            @each(books in books)
+            <div class="inCard">
+                <li>
+                    <div class="bookList">
+                        <div class="bookImg">
+                            <a href="/book/{{_id}}"><img class="imgRes" src="/img/bookImages/book1.jpg" alt="resim"></a>
+                        </div>
+                        <div class="bookContent">
+                            <div class="title">
+                                <a href="/book/{{_id}}">{{ books.title }}</a>
+                            </div>
+                            <div class="publisher">
+                                <a>{{ books.publisher }}</a>
+                            </div>
+                            <div class="author">
+                                <a>{{ books.author }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </div>
+            @end
+        </ul> 
+    </main>
 </div>
-
 @endsection
