@@ -7,11 +7,10 @@ export default class Books extends BaseSchema {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
       table.string('title')
-      table.string('publisher')
       table.string('author')
-      /**
-       * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
-       */
+      table.string('publisher')
+      table.string('book_image')
+      table.string('book_catn').references('cat_name')
       table.timestamp('created_at', { useTz: true })
       table.timestamp('updated_at', { useTz: true })
     })

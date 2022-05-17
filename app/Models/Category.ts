@@ -6,10 +6,10 @@ export default class Category extends BaseModel {
   public id: number
 
   @column()
-  public categoryName: string
+  public cat_name: string
 
   @column()
-  public categoryImage: string
+  public cat_image: string
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime

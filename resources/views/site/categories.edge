@@ -3,10 +3,10 @@
 <div class="row row-cols-1 row-cols-md-2 g-4 categories">
   @each(categories in categories)
   <div class="col-4">
-    <div class="card">
-      <img src="/img/categoriesImages/cat1.jpg" class="card-img-top" alt="...">
+    <div class="card cat">
+      <img src="{{'/img/categoriesImages/' +  categories.cat_image}}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">{{ categories.categoryName }}</h5>
+        <h5 class="card-title">{{ categories.cat_name }}</h5>
       </div>
     </div>
   </div>

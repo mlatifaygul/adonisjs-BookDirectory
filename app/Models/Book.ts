@@ -9,10 +9,16 @@ export default class Book extends BaseModel {
   public title: string
 
   @column()
+  public author: string
+
+  @column()
   public publisher: string
 
   @column()
-  public author: string
+  public book_image: string
+
+  @column()
+  public book_catn: string
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime

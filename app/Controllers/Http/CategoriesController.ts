@@ -1,9 +1,9 @@
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
-import Categories from 'App/Models/Category'
+import Category from 'App/Models/Category'
 
 export default class CategoriesController {
   public async index({ view }: HttpContextContract) {
-    const categories = await Categories.query()
+    const categories = await Category.all()
     return view.render('site/categories', {
       categories
     })
