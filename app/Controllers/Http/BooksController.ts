@@ -1,4 +1,5 @@
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
+import Category from 'App/Models/Category'
 import Books from 'App/Models/Book'
 export default class BooksController {
   public async index({ view }: HttpContextContract) {
@@ -8,7 +9,12 @@ export default class BooksController {
     })
   }
 
-  public async create({ }: HttpContextContract) { }
+  public async create({ view }: HttpContextContract) { 
+    const categories = await Category.all()
+    return view.render('site/admin/add_book', {
+      categories
+    })
+  }
 
   public async store({ }: HttpContextContract) { }
 

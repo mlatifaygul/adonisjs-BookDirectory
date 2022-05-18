@@ -20,5 +20,7 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 Route.get('/', 'BooksController.index')
+Route.get('/add_book', 'BooksController.create')
 Route.resource('book', 'BooksController')
 Route.resource('categories', 'CategoriesController')
+

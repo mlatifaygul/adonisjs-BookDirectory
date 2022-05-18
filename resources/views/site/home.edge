@@ -1,5 +1,6 @@
 @layout('layouts/main')
 @section('body')
+
 <div class="home">
     <main class="container-books">
         <ul class="cardList">
@@ -8,10 +9,11 @@
                 <li>
                     <div class="bookList">
                         <div class="bookImg">
-                            <a href="/book/{{_id}}"><img class="imgRes" src="/img/bookImages/book1.jpg" alt="resim"></a>
+                            <a href="/book/{{_id}}"><img class="imgRes" src="{{'/img/bookImages/' + books.book_image }}"
+                                    alt="resim"></a>
                         </div>
                         <div class="bookContent">
-                            <div class="title">
+                            <div class="title" style="font-size: 15px; font-family: 'source_sans_proregular';">
                                 <a href="/book/{{_id}}">{{ books.title }}</a>
                             </div>
                             <div class="publisher">
@@ -25,7 +27,10 @@
                 </li>
             </div>
             @end
-        </ul> 
+        </ul>
     </main>
+</div>
+<div class="footer footerN">
+    @include('partials/site-footer')
 </div>
 @endsection
