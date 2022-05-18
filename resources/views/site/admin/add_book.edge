@@ -1,7 +1,7 @@
 @layout('layouts/main')
 
 @section('body')
-<form class="was-validated ui form" style="margin-top:150px; width:40%; ">
+<form action="{{ route('BooksController.store') }}" method="POST" enctype="multipart/form-data" class="was-validated ui form" style="margin-top:150px; width:40%; ">
     <div class="mb-3">
         <div class="field">
             <label>Title</label>
@@ -24,7 +24,7 @@
     <div class="mb-3">
         <div class="field">
             <label>Categories</label>
-            <select class="form-select" name="category" required aria-label="select example">
+            <select class="form-select" name="book_catn" required aria-label="select example">
                 <option value="">Open this categories menu</option>
                 @each(categories in categories)
                 <option value="{{ categories.id }}">{{ categories.cat_name }}</option>

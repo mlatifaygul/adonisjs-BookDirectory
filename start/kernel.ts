@@ -24,6 +24,9 @@ Server.middleware.register([
   () => import('@ioc:Adonis/Core/BodyParser'),
 ])
 
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Named middleware

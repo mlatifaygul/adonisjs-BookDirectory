@@ -10,7 +10,7 @@ export default class Books extends BaseSchema {
       table.string('author')
       table.string('publisher')
       table.string('book_image')
-      table.string('book_catn').references('cat_name')
+      table.string('book_catn').references('cat_name').inTable('categories')
       table.timestamp('created_at', { useTz: true })
       table.timestamp('updated_at', { useTz: true })
     })

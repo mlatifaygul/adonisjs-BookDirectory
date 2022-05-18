@@ -140,7 +140,18 @@ const driveConfig: DriveConfig = {
       |
       | The following option just informs drive whether your bucket is using uniform
       | ACL or not. The actual setting needs to be toggled within the Google cloud
-      | console.
+      | console.disks: {
+    // ... other disk
+    s3: {
+      driver: 's3',
+      visibility: 'private',
+      key: Env.get('S3_KEY'),
+      secret: Env.get('S3_SECRET'),
+      region: Env.get('S3_REGION'),
+      bucket: Env.get('S3_BUCKET'),
+      endpoint: Env.get('S3_ENDPOINT'),
+    }
+  }
       |
       */
     //   usingUniformAcl: false,
