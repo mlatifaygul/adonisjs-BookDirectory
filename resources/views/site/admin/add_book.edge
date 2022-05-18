@@ -1,6 +1,6 @@
 @layout('layouts/main')
-
 @section('body')
+@include('partials/site-navbarS')
 <form action="{{ route('BooksController.store') }}" method="POST" enctype="multipart/form-data" class="was-validated ui form" style="margin-top:150px; width:40%; ">
     <div class="mb-3">
         <div class="field">

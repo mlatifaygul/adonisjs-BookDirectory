@@ -1,6 +1,7 @@
 @layout('layouts/main')
 @section('body')
-
+@include('partials/site-searchBar')
+@include('partials/site-navbar')
 <div class="home">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
@@ -48,7 +49,14 @@
             @end
         </ul>
     </main>
-</div>
+  </div>
+  <div class="ui pagination menu d-flex justify-content-center">
+      @each(anchor in books.getUrlsForRange(1, books.lastPage))
+      <a class="item " href="{{ anchor.url }}">
+        {{ anchor.page }}
+      </a>
+      @endeach
+    </div>
 <div class="footer footerN">
     @include('partials/site-footer')
 </div>

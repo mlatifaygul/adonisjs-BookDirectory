@@ -1,0 +1,79 @@
+@layout('layouts/main')
+@section('body')
+@include('partials/site-navbarS')
+<div class="container">
+
+    @if(flashMessages.has('alert'))
+    <div class="alert alert-success d-flex align-items-center " role="alert" style="margin-top:50px">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+        <div>
+             <p>&nbsp &nbsp {{ flashMessages.get('alert') }}</p>
+        </div>
+      </div>
+      @end
+    <div class="container-adminCat">
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            </symbol>
+            <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+            </symbol>
+            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </symbol>
+          </svg>
+
+        <div class="nav-admin">
+            <div class="navlink">
+                <a href="/admin-books">Books</a>
+            </div>
+            <div class="hr">
+            </div>
+            <div class="navlink">
+                <a href="/admin-categories">Categories</a>
+            </div>
+        </div>
+        <div class="content-categories">
+            <div class="add-category">
+                <form action="{{ route('CategoriesController.store') }}" method="POST" enctype="multipart/form-data" class="fAddBook">
+                    <input type="text" name="cat_name" placeholder="Kategori İsmi">
+                    <input type="file" name="cat_image">
+                    <button type="submit">Ekle</button>
+                </form>
+            </div>
+            <div class="listCategory">
+                <div class="catTable">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Kategori İsmi</th>
+                                <th>Sil</th>
+                                <th>Güncelle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @each(item in categories)
+                            <tr>
+                                <td colspan="2"><input type="text" name="catName" value="{{item.cat_name}}" size="30"
+                                        maxlength="30"></td>
+                                <td>
+                                    <form method="post" action="/admin/categories/id?_method=DELETE">
+                                        <button type="submit" class="sil">Sil</button>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="/admin/categories/id?_method=PUT" method="post"></form>
+                                    <button type="submit" class="guncel">Güncelle</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            @end
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@end

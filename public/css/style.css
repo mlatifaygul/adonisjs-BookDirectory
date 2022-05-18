@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   top: 0;
+  font-size: 13px
 }
 
 body{
@@ -11,6 +12,7 @@ body{
   padding: 0;
   height: 100%;
   line-height: 1.34;
+  
 }
 div{
   display: block;
@@ -357,6 +359,16 @@ p {
 
 /*  ----------------------- Site-Nav  ----------------------- */
 
+.nav-box {
+  width: 100%;
+  position: fixed;
+  margin: 0 auto;
+  top: 0;
+  min-width: 625px;
+  padding-bottom: 2px;
+  z-index: 999;
+}
+
 .nav-boxS {
   background-color: #333232;
   width: 100%;
@@ -702,3 +714,771 @@ p {
     color:#aaa;
     margin-bottom:0;
   }
+
+ /* ----------------------- Admin İndex ----------------------- */
+
+
+.container-admin {
+    margin: auto;
+    position: relative;
+    margin-top: 50px;
+    width: 1200px;
+    height: 685px;
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid #33323257;
+}
+
+.nav-admin {
+    position: sticky;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 8%;
+    background-color: #333232;
+    z-index: 1;
+}
+
+.nav-admin:hover {
+    background-color: #333232e8;
+}
+
+.navlink {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    position: relative;
+    width: 200px;
+    padding: 0;
+    text-align: center;
+
+}
+
+.navlink a {
+    display: flex;
+    flex-flow: column wrap;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    list-style: none;
+    text-decoration: none;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.937);
+    background-color: #333232e8;
+    height: 40px;
+    padding: 10px;
+}
+
+.navlink a:hover {
+    background-color: #333232;
+    color: white;
+}
+
+.hr {
+    position: relative;
+    height: 40px;
+    width: 1px;
+    background-color: #ffffff57;
+    padding: 0;
+}
+
+.content-main search-admin{
+    border-top: 1px solid #33323257;
+    border-bottom: 1px solid #33323257;
+    position: relative;
+    top: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+/* -------------- Content Books ---------------*/
+
+.content-books {
+    border-top: 1px solid #33323257;
+    position: absolute;
+    display: flex;
+    flex-flow: column wrap;
+    top: 40px;
+    width: 100%;
+    height: auto;
+}
+
+.admin-books {
+    display: flex;
+    flex-flow: row wrap;
+    height: auto;
+}
+
+.search-admin {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 35px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.278);
+}
+
+.search-admin input {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    padding: 5px 10px;
+    height: 100%;
+    display: inline-block;
+    width: 70%;
+    border-top-left-radius: 3px;
+    border: 2px solid #10c033;
+    opacity: 0.8;
+
+}
+
+.search-admin input[type=text]:focus {
+    border-top-left-radius: 3px;
+    border: 3px solid #10c033;
+    outline: none;
+    opacity: 1;
+}
+
+
+.search-admin button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100%;
+    width: 20%;
+    display: block;
+    background-color: #10c033;
+    color: white;
+    margin-right: 35.5px;
+    padding: 5px 10px;
+    opacity: 0.8;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    border-top-right-radius: 3px;
+    border-top: 2px solid #10c033;
+    border-right: 2px solid #10c033;
+    border-bottom: 2px solid #10c033;
+
+}
+
+.search-admin button:hover {
+    opacity: 1;
+}
+
+.cardListA {
+    margin: 0 auto;
+    position: relative;
+    width: 1000px;
+    height: 607px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    -webkit-flex-flow: wrap row;
+    list-style: none;
+    border-left: 1px solid #33323263;
+    border-right: 1px solid #33323263;
+
+}
+
+.inCardA {
+    width: auto;
+    margin: 5px 10px;
+    height: auto;
+}
+
+.bookListA {
+    margin-top: 5px;
+    background-color: rgb(255, 255, 255);
+    width: 170px;
+    height: 285px;
+    border: 1px solid black;
+    border-bottom: 3px solid red;
+    cursor: default;
+    transition: all 0.2s;
+}
+
+.bookListA:hover {
+    -webkit-box-shadow: 2px 10px 5px -2px #333232;
+    -moz-box-shadow: 2px 10px 5px -2px #333232;
+    box-shadow: 2px 10px 5px 8px -2px #333232;
+    transition: all 0.2s;
+}
+
+.bookImgA {
+    width: 158px;
+    height: 180px;
+    margin: 1% 3% 2% 3%;
+}
+
+.bookImgA img {
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+.bookImgA:hover {
+    width: 170px;
+    height: 185px;
+    margin: 0px;
+    transition: all 0.2s;
+}
+
+
+.buttonList {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-self: center;
+    align-content: center;
+    margin-top: 2px;
+}
+
+.buttonList button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    width: 60px;
+    padding: 2px 2px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.buttonList .sil {
+    background-color: rgb(239, 25, 25);
+    color: white;
+    opacity: 0.85;
+    border: none;
+}
+
+.buttonList .sil:hover {
+    opacity: 1;
+}
+
+.buttonList .guncel {
+    background-color: rgb(24, 61, 243);
+    color: white;
+    opacity: 0.85;
+    border: none;
+}
+
+.buttonList .guncel:hover {
+    opacity: 1;
+}
+
+
+
+
+
+/* ----------------------- Admin İndex ----------------------- */
+
+
+.container-admin {
+  margin: auto;
+  position: relative;
+  margin-top: 50px;
+  width: 1200px;
+  height: 685px;
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid #33323257;
+}
+
+.nav-admin {
+  position: sticky;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 8%;
+  background-color: #333232;
+  z-index: 1;
+}
+
+.nav-admin:hover {
+  background-color: #333232e8;
+}
+
+.navlink {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  position: relative;
+  width: 200px;
+  padding: 0;
+  text-align: center;
+
+}
+
+.navlink a {
+  display: flex;
+  flex-flow: column wrap;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
+  list-style: none;
+  text-decoration: none;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.937);
+  background-color: #333232e8;
+  height: 40px;
+  padding: 10px;
+}
+
+.navlink a:hover {
+  background-color: #333232;
+  color: white;
+}
+
+.hr {
+  position: relative;
+  height: 40px;
+  width: 1px;
+  background-color: #ffffff57;
+  padding: 0;
+}
+
+.content-main {
+  border-top: 1px solid #33323257;
+  border-bottom: 1px solid #33323257;
+  position: relative;
+  top: 40px;
+  width: 100%;
+  height: 100%;
+}
+
+/* -------------- Content Books ---------------*/
+
+.content-books {
+  border-top: 1px solid #33323257;
+  position: absolute;
+  display: flex;
+  flex-flow: column wrap;
+  top: 40px;
+  width: 100%;
+  height: auto;
+}
+
+.admin-books {
+  display: flex;
+  flex-flow: row wrap;
+  height: auto;
+}
+
+.search-admin {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 35px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.278);
+}
+
+.search-admin input {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+  padding: 5px 10px;
+  height: 100%;
+  display: inline-block;
+  width: 70%;
+  border-top-left-radius: 3px;
+  border: 2px solid #10c033;
+  opacity: 0.8;
+
+}
+
+.search-admin input[type=text]:focus {
+  border-top-left-radius: 3px;
+  border: 3px solid #10c033;
+  outline: none;
+  opacity: 1;
+}
+
+
+.search-admin button {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  height: 100%;
+  width: 20%;
+  display: block;
+  background-color: #10c033;
+  color: white;
+  margin-right: 35.5px;
+  padding: 5px 10px;
+  opacity: 0.8;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  border-top-right-radius: 3px;
+  border-top: 2px solid #10c033;
+  border-right: 2px solid #10c033;
+  border-bottom: 2px solid #10c033;
+
+}
+
+.search-admin button:hover {
+  opacity: 1;
+}
+
+.cardListA {
+  margin: 0 auto;
+  position: relative;
+  width: 1000px;
+  height: 607px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  -webkit-flex-flow: wrap row;
+  list-style: none;
+  border-left: 1px solid #33323263;
+  border-right: 1px solid #33323263;
+
+}
+
+.inCardA {
+  width: auto;
+  margin: 5px 10px;
+  height: auto;
+}
+
+.bookListA {
+  margin-top: 5px;
+  background-color: rgb(255, 255, 255);
+  width: 170px;
+  height: 285px;
+  border: 1px solid black;
+  border-bottom: 3px solid red;
+  cursor: default;
+  transition: all 0.2s;
+}
+
+.bookListA:hover {
+  -webkit-box-shadow: 2px 10px 5px -2px #333232;
+  -moz-box-shadow: 2px 10px 5px -2px #333232;
+  box-shadow: 2px 10px 5px 8px -2px #333232;
+  transition: all 0.2s;
+}
+
+.bookImgA {
+  width: 158px;
+  height: 180px;
+  margin: 1% 3% 2% 3%;
+}
+
+.bookImgA img {
+  height: 100%;
+  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+.bookImgA:hover {
+  width: 170px;
+  height: 185px;
+  margin: 0px;
+  transition: all 0.2s;
+}
+
+
+.buttonList {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-self: center;
+  align-content: center;
+  margin-top: 2px;
+}
+
+.buttonList button {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+  width: 60px;
+  padding: 2px 2px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.buttonList .sil {
+  background-color: rgb(239, 25, 25);
+  color: white;
+  opacity: 0.85;
+  border: none;
+}
+
+.buttonList .sil:hover {
+  opacity: 1;
+}
+
+.buttonList .guncel {
+  background-color: rgb(24, 61, 243);
+  color: white;
+  opacity: 0.85;
+  border: none;
+}
+
+.buttonList .guncel:hover {
+  opacity: 1;
+}
+
+/* -------------- Content Categories ---------------*/
+
+.container-adminCat {
+  margin: auto;
+  position: relative;
+  margin-top: 50px;
+  width: 1200px;
+  height: 660px;
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid #33323257;
+  overflow: auto;
+}
+
+.content-categories {
+  border-top: 1px solid #33323257;
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.add-category {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 55px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.278);
+}
+
+.fAddBook {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+  height: 32px;
+}
+
+.add-category input {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: absolute;
+  font-size: 16px;
+  padding: 5px 10px;
+  height: 100%;
+  display: inline-block;
+  width: 70%;
+  border-top-left-radius: 3px;
+  border: 2px solid #33323283;
+
+
+}
+
+.add-category input:hover {
+  border-color: #10c033;
+  outline: none;
+  opacity: 0.8;
+
+}
+
+.add-category input:focus {
+  outline: none;
+  border: 2px solid #10c033;
+  opacity: 1;
+}
+
+.add-category input[type=text] {
+  margin-right: 60%;
+  width: 300px;
+}
+
+.add-category input[type=file] {
+  cursor: pointer;
+  margin-left: 15%;
+  width: 220px;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+.add-category button {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  height: 100%;
+  width: 20%;
+  display: block;
+  background-color: #10c033;
+  color: white;
+  padding: 0;
+  opacity: 0.8;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  border-top-right-radius: 3px;
+  border: 2px solid #33323283;
+  margin-left: 70%;
+
+}
+
+.add-category button:hover {
+  opacity: 1;
+  border-top-right-radius: 3px;
+}
+
+.listCategory {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: inline-block;
+
+}
+
+.catTable {
+  width: 1100px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+  border: 1px solid black;
+}
+
+.catTable table {
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+.catTable input {
+  border: 1px solid rgba(0, 0, 0, 0.347);
+  border-radius: 3px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+  padding: 6px 10px;
+  text-align: center;
+  width: 230px;
+}
+
+.catTable th,
+td {
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.458);
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+}
+
+.catTable th,
+td {
+  padding: 6px 10px;
+}
+
+.catTable table button {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+  width: 80px;
+  padding: 6px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.catTable .sil {
+  background-color: rgb(239, 25, 25);
+  color: white;
+  opacity: 0.85;
+  border: none;
+}
+
+.catTable .sil:hover {
+  opacity: 1;
+}
+
+.catTable .guncel {
+  background-color: rgb(24, 61, 243);
+  color: white;
+  opacity: 0.85;
+  border: none;
+}
+
+.catTable .guncel:hover {
+  opacity: 1;
+}
+
+.tdColor:hover {
+  background-color: #333232;
+}
+
+/* ------------------- Categories ---------------*/
+
+.container-categories {
+  position: relative;
+  display: flex;
+  top: 50px;
+  background-color: #faf9f9;
+}
+
+.categories-List {
+  margin: 0 auto;
+  width: 1200px;
+  height: 700px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  position: relative;
+  border: 1px solid #33323263;
+  margin-top: 60px;
+  overflow: auto;
+}
+
+.single-category {
+  display: inline-block;
+  width: 360px;
+  height: 140px;
+  position: relative;
+  border: 1px solid #333232e3;
+  margin: 10px 15px;
+  border-radius: 4px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #cccccc;
+}
+
+.catImg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  z-index: 999;
+}
+
+.catImg img {
+  height: 100%;
+  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+.catNames {
+  position: absolute;
+  margin-left: 8%;
+  margin-top: 25%;
+}
+
+.catNames p {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  text-transform: uppercase;
+  display: inline-block;
+  color: white;
+  background-color: #33323269;
+}
